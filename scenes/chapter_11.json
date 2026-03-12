@@ -1,0 +1,41 @@
+{
+  "chapter": 11,
+  "title": "A Vision Beyond Comprehension",
+  "text": "Reality reveals its vast, terrifying beauty.",
+  "choices": [
+    {
+      "label": "Panic",
+      "effects": {
+        "tamas": 7
+      }
+    },
+    {
+      "label": "Seek control",
+      "effects": {
+        "rajas": 7
+      }
+    },
+    {
+      "label": "Humble acceptance",
+      "effects": {
+        "sattva": 6,
+        "purity": 4
+      }
+    },
+    {
+      "label": "Understand the metaphor",
+      "effects": {
+        "clarity": 7
+      }
+    },
+    {
+      "label": "Bow in surrender",
+      "effects": {
+        "devotion": 8
+      }
+    }
+  ],
+  "action": "Steady yourself in overwhelming situations",
+  "meditation": "Observe the space between thoughts.",
+  "boss": false
+}

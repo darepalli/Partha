@@ -1,0 +1,42 @@
+{
+  "chapter": 17,
+  "title": "Three Forms of Faith",
+  "text": "Your faith matures. What shapes it?",
+  "choices": [
+    {
+      "label": "Blind superstition",
+      "effects": {
+        "tamas": 6,
+        "clarity": -3
+      }
+    },
+    {
+      "label": "Faith for reward",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "Faith in goodness",
+      "effects": {
+        "sattva": 7,
+        "purity": 4
+      }
+    },
+    {
+      "label": "Faith grounded in reason",
+      "effects": {
+        "clarity": 7
+      }
+    },
+    {
+      "label": "Faith in the Divine alone",
+      "effects": {
+        "devotion": 8
+      }
+    }
+  ],
+  "action": "Choose a truthful vow & follow it",
+  "meditation": "Let attention settle naturally.",
+  "boss": false
+}

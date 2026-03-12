@@ -1,0 +1,43 @@
+{
+  "chapter": 6,
+  "title": "The Discipline of Mind",
+  "text": "Your thoughts wander wildly. You must choose how to train the mind.",
+  "choices": [
+    {
+      "label": "Give in to restlessness",
+      "effects": {
+        "rajas": 7,
+        "tamas": 2
+      }
+    },
+    {
+      "label": "Forceful suppression",
+      "effects": {
+        "rajas": 5
+      }
+    },
+    {
+      "label": "Gentle discipline",
+      "effects": {
+        "sattva": 6,
+        "clarity": 4
+      }
+    },
+    {
+      "label": "Deep introspection",
+      "effects": {
+        "clarity": 6
+      }
+    },
+    {
+      "label": "Devotional meditation",
+      "effects": {
+        "devotion": 7,
+        "sattva": 3
+      }
+    }
+  ],
+  "action": "Hold discipline under pressure",
+  "meditation": "Anchor attention at the crown.",
+  "boss": true
+}

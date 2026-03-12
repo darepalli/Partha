@@ -1,0 +1,43 @@
+{
+  "chapter": 9,
+  "title": "The Heart of Devotion",
+  "text": "A profound opening of the heart becomes possible.",
+  "choices": [
+    {
+      "label": "Distrust devotion",
+      "effects": {
+        "tamas": 5
+      }
+    },
+    {
+      "label": "Seek powers",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "Serve others",
+      "effects": {
+        "serviceCount": 1,
+        "purity": 6,
+        "sattva": 3
+      }
+    },
+    {
+      "label": "Contemplate love",
+      "effects": {
+        "sattva": 6,
+        "clarity": 4
+      }
+    },
+    {
+      "label": "Offer yourself fully",
+      "effects": {
+        "devotion": 8
+      }
+    }
+  ],
+  "action": "Do charity without recognition",
+  "meditation": "Rest in the still point behind breath.",
+  "boss": false
+}

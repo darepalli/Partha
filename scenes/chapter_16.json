@@ -1,0 +1,43 @@
+{
+  "chapter": 16,
+  "title": "Divine or Demonic?",
+  "text": "Two voices arise within \u2014 one noble, one destructive.",
+  "choices": [
+    {
+      "label": "Follow the dark voice",
+      "effects": {
+        "tamas": 8,
+        "clarity": -4
+      }
+    },
+    {
+      "label": "Follow egoic impulses",
+      "effects": {
+        "rajas": 7
+      }
+    },
+    {
+      "label": "Follow noble intention",
+      "effects": {
+        "sattva": 7,
+        "purity": 5
+      }
+    },
+    {
+      "label": "Follow wisdom",
+      "effects": {
+        "clarity": 6
+      }
+    },
+    {
+      "label": "Follow surrender",
+      "effects": {
+        "devotion": 6,
+        "sattva": 3
+      }
+    }
+  ],
+  "action": "Control anger in provocation",
+  "meditation": "Offer each breath to the Divine.",
+  "boss": true
+}

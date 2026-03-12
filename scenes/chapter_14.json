@@ -1,0 +1,42 @@
+{
+  "chapter": 14,
+  "title": "The Three Forces",
+  "text": "You notice Sattva, Rajas, and Tamas shifting within you.",
+  "choices": [
+    {
+      "label": "Yield to inertia",
+      "effects": {
+        "tamas": 7
+      }
+    },
+    {
+      "label": "Fuel ambition",
+      "effects": {
+        "rajas": 7
+      }
+    },
+    {
+      "label": "Cultivate purity",
+      "effects": {
+        "sattva": 7,
+        "purity": 4
+      }
+    },
+    {
+      "label": "Seek detachment",
+      "effects": {
+        "clarity": 6
+      }
+    },
+    {
+      "label": "Offer tendencies to the Divine",
+      "effects": {
+        "devotion": 6,
+        "sattva": 3
+      }
+    }
+  ],
+  "action": "Reject an unethical shortcut",
+  "meditation": "Return to breath whenever distracted.",
+  "boss": false
+}

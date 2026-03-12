@@ -1,0 +1,44 @@
+{
+  "chapter": 3,
+  "title": "The Weight of Action",
+  "text": "Your duty demands effort, but personal desires pull you away. What drives your action?",
+  "choices": [
+    {
+      "label": "Laziness",
+      "effects": {
+        "tamas": 7
+      }
+    },
+    {
+      "label": "Personal fame",
+      "effects": {
+        "rajas": 7,
+        "clarity": -2
+      }
+    },
+    {
+      "label": "Right conduct",
+      "effects": {
+        "purity": 6,
+        "sattva": 4
+      }
+    },
+    {
+      "label": "Clear intention",
+      "effects": {
+        "clarity": 6,
+        "sattva": 2
+      }
+    },
+    {
+      "label": "Offering action to the Divine",
+      "effects": {
+        "devotion": 6,
+        "purity": 3
+      }
+    }
+  ],
+  "action": "Perform duty without expecting praise",
+  "meditation": "Hold awareness at the heart center.",
+  "boss": true
+}

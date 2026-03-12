@@ -1,0 +1,43 @@
+{
+  "chapter": 18,
+  "title": "The Final Surrender",
+  "text": "Your long journey approaches its end. One choice remains.",
+  "choices": [
+    {
+      "label": "Cling to outcomes",
+      "effects": {
+        "rajas": 7,
+        "clarity": -3
+      }
+    },
+    {
+      "label": "Give up out of fatigue",
+      "effects": {
+        "tamas": 6
+      }
+    },
+    {
+      "label": "Perform final duty",
+      "effects": {
+        "purity": 7,
+        "sattva": 3
+      }
+    },
+    {
+      "label": "Understand the whole path",
+      "effects": {
+        "clarity": 8
+      }
+    },
+    {
+      "label": "Surrender fully",
+      "effects": {
+        "devotion": 9,
+        "sattva": 4
+      }
+    }
+  ],
+  "action": "Renounce the final attachment",
+  "meditation": "Rest in being itself.",
+  "boss": false
+}
