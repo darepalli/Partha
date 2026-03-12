@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#e6edf3" stroke-width="3">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#122b45"/>
+      <stop offset="65%" stop-color="#173f5f"/>
+      <stop offset="100%" stop-color="#0f2134"/>
+    </linearGradient>
+    <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#53e3ce"/>
+      <stop offset="45%" stop-color="#6ac9ff"/>
+      <stop offset="100%" stop-color="#f7a95a"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fff3d4"/>
+      <stop offset="100%" stop-color="#ffd57a"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" rx="16" fill="url(#bg)"/>
+  <g transform="translate(100,120)">
+    <path d="M0-20 C-10-50 -40-60 -60-20 C-20-10 -10 10 0 20 C10 10 20-10 60-20 C40-60 10-50 0-20z" fill="url(#petal)" opacity="0.95"/>
+    <path d="M0-35 C-5-55 -25-70 -45-40 C-20-30 -10 -5 0 10 C10 -5 20-30 45-40 C25-70 5-55 0-35z" fill="#8ef3f0" opacity="0.7"/>
+    <circle cx="0" cy="0" r="6" fill="url(#core)"/>
+  </g>
+</svg>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1b2a3a" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>Path of the Inner Warrior</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><img src="art/lotus.svg" alt="Lotus"/></div>
+    <h1>Path of the Inner Warrior</h1>
+    <div class="actions">
+      <button id="installBtn" class="ghost" title="Install">Install</button>
+      <button id="muteBtn" class="ghost" title="Mute/Unmute">🔊</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="screen-demo" class="screen">
+      <div class="card">
+        <h2>Demo: Dharma Survival</h2>
+        <p class="tiny">This quick demo explains the loop before you enter Chapter 1.</p>
+        <div class="card">
+          <h3>Core Rules</h3>
+          <p class="tiny">1 second equals 1 hour. If you go 7 days without food, you die. If you go 3 days without water, you die.</p>
+          <p class="tiny">Use <strong>WASD</strong> or arrows to move. Use <strong>E</strong> food, <strong>R</strong> water, <strong>K</strong> strike, <strong>C</strong> craft, <strong>T</strong> trade, <strong>B</strong> shrine blessing.</p>
+          <p class="tiny">Act with dharma: harming unjustly demotes rebirth; care, restraint, and service promote higher rebirth.</p>
+        </div>
+        <div class="card" id="demoLegend">
+          <h3>Animated Legend</h3>
+          <div class="legend-grid tiny">
+            <button class="legend-item legend-btn" data-tip="Food restores survival time. Gather and eat with E before 7 days pass."><span class="legend-dot food pulse"></span>Food node</button>
+            <button class="legend-item legend-btn" data-tip="Water prevents dehydration. Drink with R before 3 days pass."><span class="legend-dot water pulse"></span>Water source</button>
+            <button class="legend-item legend-btn" data-tip="Strike only when dharma demands it. Unjust harm lowers karma."><span class="legend-dot enemy pulse"></span>Hostile enemy</button>
+            <button class="legend-item legend-btn" data-tip="Trade peacefully with T to convert resources and gain dharma."><span class="legend-dot merchant pulse"></span>Merchant</button>
+            <button class="legend-item legend-btn" data-tip="Offer herbs with B for blessings that help health and dharma."><span class="legend-dot shrine pulse"></span>Shrine</button>
+            <button class="legend-item legend-btn" data-tip="Warriors of different traits compete. Their actions shape rebirth outcomes."><span class="legend-dot warrior pulse"></span>Warrior</button>
+          </div>
+          <p id="demoLegendTip" class="tiny">Tip: hover, focus, or tap a legend item.</p>
+        </div>
+        <div class="choices">
+          <button id="demoStartBtn" class="primary">Start Chapter Journey</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-start" class="screen hidden">
+      <div class="hero">
+        <img src="art/chariot.svg" alt="Chariot" class="hero-art"/>
+        <div class="card">
+          <h2>Dharma Survival</h2>
+          <p class="tiny">Classic circle mode has been retired. Survival mode is now the primary game.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-survival" class="screen hidden">
+      <div class="card">
+        <h2>Dharma Survival</h2>
+        <div class="card" id="svHelpCard">
+          <h3>How To Play</h3>
+          <p class="tiny">Time scale: <strong>1 second = 1 hour</strong>. If you go <strong>7 days</strong> without food you die. If you go <strong>3 days</strong> without water you die.</p>
+          <p class="tiny">Move: <strong>WASD</strong> or arrow keys. Eat nearby food: <strong>E</strong>. Drink nearby water: <strong>R</strong>. Strike: <strong>K</strong>. Craft: <strong>C</strong>. Trade: <strong>T</strong>. Bless at shrine: <strong>B</strong>.</p>
+          <p class="tiny">Hints: food and water keep you alive, fullness warns against overeating, merchants and shrines support the peaceful path, and 18 warriors of each trait compete for resources around you.</p>
+        </div>
+        <div class="survival-hud">
+          <div class="stat"><span>❤ Health</span><progress id="svHealth" max="100"></progress></div>
+          <div class="stat"><span>🍲 Food Reserve</span><progress id="svHunger" max="100"></progress></div>
+          <div class="stat"><span>💧 Water Reserve</span><progress id="svWater" max="100"></progress></div>
+          <div class="stat"><span>🥮 Fullness</span><progress id="svFullness" max="100"></progress></div>
+          <div class="stat"><span>💪 Strength</span><progress id="svStrength" max="100"></progress></div>
+          <div class="stat"><span>⚖ Dharma</span><progress id="svDharma" max="100"></progress></div>
+        </div>
+        <div class="card" id="svChapterCard">
+          <h3 id="svChapterTitle">Chapter 1: The Call</h3>
+          <p id="svChapterText" class="tiny">Make a chapter choice to begin.</p>
+          <div id="svChapterChoices" class="choices"></div>
+        </div>
+        <p id="svSummary" class="tiny">Survive with discernment.</p>
+        <p id="svHint" class="tiny">Hint: choose a chapter action to begin.</p>
+        <p id="svInventory" class="tiny">Inventory: empty</p>
+        <p id="svPeace" class="tiny">Peace Path: 0 actions</p>
+        <p id="svWarriors" class="tiny">Warriors: loading...</p>
+        <div class="card" id="svLedgerCard">
+          <h3>Karma Ledger</h3>
+          <ul id="svLedger" class="tiny event-log"></ul>
+        </div>
+        <div id="survivalCanvasWrap"><canvas id="survivalCanvas" width="760" height="420"></canvas></div>
+        <div class="choices">
+          <button id="svPause" class="ghost">Pause</button>
+          <button id="svExit" class="ghost">Exit Survival</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-hud" class="screen hidden">
+      <div class="hud">
+        <div class="stat"><span>🕊 Sattva</span><progress id="sattva" max="100"></progress></div>
+        <div class="stat"><span>🔥 Rajas</span><progress id="rajas" max="100"></progress></div>
+        <div class="stat"><span>🌑 Tamas</span><progress id="tamas" max="100"></progress></div>
+        <div class="stat"><span>🪞 Clarity</span><progress id="clarity" max="100"></progress></div>
+        <div class="stat"><span>💠 Purity</span><progress id="purity" max="100"></progress></div>
+        <div class="stat"><span>🕉 Devotion</span><progress id="devotion" max="100"></progress></div>
+        <div class="stat"><span>🎯 Focus</span><progress id="focus" max="100"></progress></div>
+      </div>
+      <div class="chapterbar">
+        <span id="chapterLabel">Chapter 1</span>
+        <span id="streakLabel" class="tiny">Karma Streak: 0 (Best 0)</span>
+        <div class="chapters" id="chapters"></div>
+      </div>
+
+      <div id="narrative" class="card fade-in"></div>
+      <div id="choices" class="choices"></div>
+
+      <div id="actionPhase" class="card hidden">
+        <h3>Action Challenge</h3>
+        <p id="actionName" class="tiny"></p>
+        <p class="tiny">Keyboard: A = Selfless, S = Skilled, D = Reward</p>
+        <div class="choices">
+          <button class="choice" data-action="selfless">Selfless Action</button>
+          <button class="choice" data-action="skilled">Skilled Action</button>
+          <button class="choice" data-action="reward">Reward‑Seeking Action</button>
+        </div>
+        <p id="actionResult" class="tiny"></p>
+      </div>
+
+      <div id="bossPhase" class="card hidden">
+        <h3>Inner Enemy</h3>
+        <p id="bossName" class="tiny"></p>
+        <div class="bossbar"><div id="bossMeter"></div></div>
+        <p class="tiny">Tap repeatedly to dissolve the inner enemy with awareness.</p>
+        <button id="bossTap" class="primary">Hold Steady</button>
+      </div>
+
+      <div id="meditationPhase" class="card hidden">
+        <div class="row">
+          <h3>Meditation</h3>
+          <img src="art/meditate.svg" alt="Meditate" class="inline"/>
+        </div>
+        <p id="medPrompt" class="tiny"></p>
+        <p id="medTarget" class="tiny"></p>
+        <div id="medCanvasWrap"><canvas id="medCanvas" width="320" height="180"></canvas></div>
+        <p id="medResult" class="tiny"></p>
+        <button id="nextChapter" class="primary">Continue</button>
+      </div>
+
+      <div class="card">
+        <h3>Journey Log</h3>
+        <ul id="eventLog" class="tiny event-log"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Consequences</h3>
+        <p id="consequenceSummary" class="tiny">Virtues: None yet. Burdens: None yet.</p>
+      </div>
+
+      <dialog id="krishnaDlg">
+        <form method="dialog">
+          <h3>Guidance</h3>
+          <p>Choose a blessing:</p>
+          <div class="choices">
+            <button value="clarity">🪞 Clarity</button>
+            <button value="strength">🛡 Strength</button>
+            <button value="devotion">🕉 Devotion</button>
+            <button value="detachment">🌀 Detachment</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog id="winDlg">
+        <form method="dialog">
+          <h2 id="winTitle">🕉 Liberation Attained</h2>
+          <p id="winText">You achieved Clarity, Purity, and steady Devotion. Final Surrender complete.</p>
+          <button>Play Again</button>
+        </form>
+      </dialog>
+
+      <dialog id="gameOverDlg">
+        <form method="dialog">
+          <h2>Journey Continues</h2>
+          <p>You did not reach Mokṣa this time. Reflect and try again.</p>
+          <p id="gameOverReason" class="tiny"></p>
+          <button>Play Again</button>
+        </form>
+      </dialog>
+    </section>
+  </main>
+
+  <footer id="appFooter">
+    <button id="resetBtn" class="ghost">Reset</button>
+    <span class="tiny">© Prototype for educational use</span>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>

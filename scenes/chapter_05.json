@@ -1,0 +1,43 @@
+{
+  "chapter": 5,
+  "title": "Renunciation vs Participation",
+  "text": "You long for peace, but obligations call. Which path do you choose?",
+  "choices": [
+    {
+      "label": "Escape responsibility",
+      "effects": {
+        "tamas": 6
+      }
+    },
+    {
+      "label": "Forced effort",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "Balanced action",
+      "effects": {
+        "purity": 5,
+        "sattva": 4
+      }
+    },
+    {
+      "label": "Inner detachment",
+      "effects": {
+        "clarity": 7,
+        "sattva": 3
+      }
+    },
+    {
+      "label": "Act for the Divine alone",
+      "effects": {
+        "devotion": 6,
+        "purity": 3
+      }
+    }
+  ],
+  "action": "Serve someone anonymously",
+  "meditation": "Listen to silence between breaths.",
+  "boss": false
+}

@@ -1,0 +1,44 @@
+{
+  "chapter": 2,
+  "title": "The Nature of the Self",
+  "text": "A mentor asks: 'What do you believe yourself to be?' The answer shapes your path.",
+  "choices": [
+    {
+      "label": "I am this body",
+      "effects": {
+        "tamas": 5,
+        "clarity": -4
+      }
+    },
+    {
+      "label": "I want power",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "I am a servant of good",
+      "effects": {
+        "purity": 5,
+        "sattva": 3
+      }
+    },
+    {
+      "label": "I am a witness",
+      "effects": {
+        "clarity": 7,
+        "sattva": 3
+      }
+    },
+    {
+      "label": "I belong to the Divine",
+      "effects": {
+        "devotion": 7,
+        "sattva": 3
+      }
+    }
+  ],
+  "action": "Act according to truth despite discomfort",
+  "meditation": "Observe thoughts as clouds passing by.",
+  "boss": false
+}

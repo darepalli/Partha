@@ -1,0 +1,41 @@
+{
+  "chapter": 12,
+  "title": "The Path of Love",
+  "text": "You must choose how you relate to others and to the world.",
+  "choices": [
+    {
+      "label": "Withdraw",
+      "effects": {
+        "tamas": 5
+      }
+    },
+    {
+      "label": "Demand affection",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "Serve with kindness",
+      "effects": {
+        "purity": 6,
+        "sattva": 5
+      }
+    },
+    {
+      "label": "Love without fear",
+      "effects": {
+        "clarity": 6
+      }
+    },
+    {
+      "label": "Love as worship",
+      "effects": {
+        "devotion": 7
+      }
+    }
+  ],
+  "action": "Show compassion instead of judgment",
+  "meditation": "Let gratitude expand within.",
+  "boss": true
+}

@@ -1,0 +1,43 @@
+{
+  "chapter": 4,
+  "title": "Timeless Knowledge",
+  "text": "A wise teacher reveals ancient truths. Will you grasp them or ignore them?",
+  "choices": [
+    {
+      "label": "Reject teachings",
+      "effects": {
+        "tamas": 5,
+        "clarity": -3
+      }
+    },
+    {
+      "label": "Cherry\u2011pick ideas",
+      "effects": {
+        "rajas": 4
+      }
+    },
+    {
+      "label": "Study sincerely",
+      "effects": {
+        "sattva": 5,
+        "clarity": 5
+      }
+    },
+    {
+      "label": "Mentally contemplate",
+      "effects": {
+        "clarity": 7
+      }
+    },
+    {
+      "label": "Surrender to guidance",
+      "effects": {
+        "devotion": 6,
+        "sattva": 2
+      }
+    }
+  ],
+  "action": "Share knowledge responsibly",
+  "meditation": "Visualize a calming light radiating outward.",
+  "boss": false
+}

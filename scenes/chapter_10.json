@@ -1,0 +1,41 @@
+{
+  "chapter": 10,
+  "title": "The Signs of the Divine",
+  "text": "You witness extraordinary synchronicities. How do you interpret them?",
+  "choices": [
+    {
+      "label": "Coincidence",
+      "effects": {
+        "tamas": 4,
+        "clarity": -2
+      }
+    },
+    {
+      "label": "Personal superiority",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "Expression of goodness",
+      "effects": {
+        "sattva": 6
+      }
+    },
+    {
+      "label": "Clue to deeper reality",
+      "effects": {
+        "clarity": 7
+      }
+    },
+    {
+      "label": "Divine presence",
+      "effects": {
+        "devotion": 7
+      }
+    }
+  ],
+  "action": "Act despite fear of failure",
+  "meditation": "Imagine a lotus unfolding within.",
+  "boss": false
+}

@@ -1,0 +1,43 @@
+{
+  "chapter": 13,
+  "title": "Fields of Experience",
+  "text": "You observe your experiences changing rapidly. What do you identify with?",
+  "choices": [
+    {
+      "label": "Confusion",
+      "effects": {
+        "tamas": 6,
+        "clarity": -3
+      }
+    },
+    {
+      "label": "Impulses",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "Duty as identity",
+      "effects": {
+        "sattva": 4,
+        "purity": 3
+      }
+    },
+    {
+      "label": "The witnessing Self",
+      "effects": {
+        "clarity": 7
+      }
+    },
+    {
+      "label": "Soul to the Divine",
+      "effects": {
+        "devotion": 6,
+        "sattva": 2
+      }
+    }
+  ],
+  "action": "Do the right thing when no one sees",
+  "meditation": "Watch sensations arise and pass.",
+  "boss": false
+}

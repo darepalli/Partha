@@ -1,0 +1,42 @@
+{
+  "chapter": 8,
+  "title": "Facing Mortality",
+  "text": "A moment forces you to contemplate life's end. Where do you turn?",
+  "choices": [
+    {
+      "label": "Deny",
+      "effects": {
+        "tamas": 6
+      }
+    },
+    {
+      "label": "Cling to pleasure",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "Reflect calmly",
+      "effects": {
+        "sattva": 6,
+        "clarity": 4
+      }
+    },
+    {
+      "label": "Seek inner meaning",
+      "effects": {
+        "clarity": 6
+      }
+    },
+    {
+      "label": "Offer fear to the Divine",
+      "effects": {
+        "devotion": 6,
+        "sattva": 3
+      }
+    }
+  ],
+  "action": "Make a sacrifice for long\u2011term good",
+  "meditation": "Witness emotions without resistance.",
+  "boss": false
+}

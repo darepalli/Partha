@@ -1,0 +1,70 @@
+@keyframes fadeIn {from{opacity:0} to{opacity:1}}
+@keyframes pulse {0%{transform:scale(1)} 50%{transform:scale(1.03)} 100%{transform:scale(1)}}
+@keyframes glow {0%{box-shadow:0 0 0 rgba(76,201,240,0)} 50%{box-shadow:0 0 20px rgba(76,201,240,.6)} 100%{box-shadow:0 0 0 rgba(76,201,240,0)}}
+@keyframes hueDrift {0%{filter:hue-rotate(0deg)} 50%{filter:hue-rotate(12deg)} 100%{filter:hue-rotate(0deg)}}
+@keyframes legendPulse {0%{transform:scale(1);opacity:.8} 50%{transform:scale(1.18);opacity:1} 100%{transform:scale(1);opacity:.8}}
+:root{--bg:#0d1825;--fg:#f0f7ff;--muted:#a8bfd6;--card:#13273d;--card-soft:#17324e;--accent:#4ed7cf;--accent-hot:#f9b24e;--ok:#8ae051;--danger:#ff7b7b}
+body.theme-dawn{--accent:#4ed7cf;--accent-hot:#f2c36a;--ok:#94e75f;--danger:#ff9a7a}
+body.theme-zenith{--accent:#61a8ff;--accent-hot:#ffd27a;--ok:#9ae35f;--danger:#ff8f88}
+body.theme-twilight{--accent:#7cd2ff;--accent-hot:#f39d66;--ok:#b0d85b;--danger:#ff7e9d}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%;background:radial-gradient(circle at 15% 10%, rgba(78,215,207,.2), transparent 42%),radial-gradient(circle at 85% 0%, rgba(249,178,78,.18), transparent 32%),linear-gradient(160deg, #091220 0%, #10243a 52%, #0a1929 100%);color:var(--fg);font-family:Trebuchet MS,Segoe UI,Helvetica,sans-serif;transition:background .8s ease,color .5s ease}
+body.theme-dawn{background:radial-gradient(circle at 12% 12%, rgba(78,215,207,.24), transparent 45%),radial-gradient(circle at 88% 6%, rgba(242,195,106,.22), transparent 34%),linear-gradient(160deg,#0b1626 0%,#15314c 54%,#10253b 100%)}
+body.theme-zenith{background:radial-gradient(circle at 20% 8%, rgba(97,168,255,.25), transparent 42%),radial-gradient(circle at 84% 12%, rgba(255,210,122,.2), transparent 36%),linear-gradient(160deg,#0d1a2e 0%,#173659 50%,#112843 100%)}
+body.theme-twilight{background:radial-gradient(circle at 16% 10%, rgba(124,210,255,.2), transparent 44%),radial-gradient(circle at 82% 14%, rgba(243,157,102,.24), transparent 38%),linear-gradient(160deg,#111629 0%,#2a2444 52%,#1e233b 100%)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 25% 60%, rgba(255,123,123,.08), transparent 35%),radial-gradient(circle at 70% 50%, rgba(126,212,255,.1), transparent 40%);animation:hueDrift 24s ease-in-out infinite;z-index:0}
+.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:linear-gradient(90deg, rgba(8,20,34,.9), rgba(18,43,68,.9));backdrop-filter:blur(4px);position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(142,203,255,.25)}
+.topbar .logo img{height:28px}
+.topbar h1{flex:1;font-size:1.1rem;margin:0;letter-spacing:.02em}
+.topbar .actions button{margin-left:8px}
+#app{max-width:920px;margin:0 auto;padding:12px;position:relative;z-index:1}
+.card{background:linear-gradient(165deg, rgba(19,39,61,.96), rgba(14,30,46,.96));border:1px solid rgba(121,180,229,.25);border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 8px 22px rgba(2,10,18,.35)}
+.tiny{font-size:.85rem;color:var(--muted)}
+.hidden{display:none}
+.fade-in{animation:fadeIn .5s ease both}
+.paths,.choices{display:flex;flex-wrap:wrap;gap:8px}
+button{background:linear-gradient(180deg,#174264,#133651);color:var(--fg);border:1px solid #2b5c7f;padding:10px 14px;border-radius:10px;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+button:hover{background:linear-gradient(180deg,#1d5179,#17425f);transform:translateY(-1px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+button.primary{background:linear-gradient(120deg,var(--accent),var(--accent-hot));color:#0b1420;border-color:#58cfc7;animation:pulse 1.5s ease infinite}
+button.ghost{background:rgba(9,27,43,.4);border-color:#3f617f}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center}
+.hero .hero-art{width:100%;border-radius:12px;border:1px solid rgba(130,194,245,.45);box-shadow:0 10px 30px rgba(8,20,30,.4)}
+.hud{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.hud .stat{display:flex;align-items:center;gap:8px}
+progress{width:100%;height:14px;accent-color:var(--accent)}
+.chapterbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#chapters{display:grid;grid-template-columns:repeat(18,1fr);gap:2px;flex:1}
+#chapters .dot{height:10px;border-radius:6px;background:#344a61}
+#chapters .dot.active{background:var(--accent)}
+#chapters .dot.done{background:var(--ok)}
+#medCanvasWrap{display:flex;justify-content:center}
+.bossbar{height:12px;background:#0c1824;border:1px solid #3a5570;border-radius:8px;overflow:hidden;margin:8px 0}
+#bossMeter{height:100%;width:0%;background:linear-gradient(90deg,var(--danger),#ffd36e,var(--accent-hot))}
+#appFooter{display:flex;justify-content:center;gap:12px;padding:12px;color:var(--muted)}
+.event-log{margin:0;padding-left:18px;display:grid;gap:6px;max-height:160px;overflow:auto}
+.event-log li{line-height:1.3}
+#consequenceSummary{line-height:1.45}
+.survival-hud{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:8px}
+#svHelpCard{margin:0 0 10px 0}
+#svChapterCard{margin:10px 0}
+#svLedgerCard{margin:8px 0}
+#demoLegend{margin:10px 0}
+.legend-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.legend-item{display:flex;align-items:center;gap:8px}
+.legend-btn{width:100%;text-align:left;background:rgba(13,34,54,.55);border:1px solid rgba(126,175,215,.35);padding:8px 10px;border-radius:10px}
+.legend-btn:hover,.legend-btn:focus{outline:none;border-color:rgba(170,221,255,.85);box-shadow:0 0 0 2px rgba(113,195,255,.25)}
+.legend-btn:focus-visible{outline:none}
+.legend-dot{display:inline-block;width:12px;height:12px;border-radius:50%}
+.legend-dot.food{background:#f7cd7a}
+.legend-dot.water{background:#75d0ff}
+.legend-dot.enemy{background:#ff7a88}
+.legend-dot.merchant{background:#7cd2ff}
+.legend-dot.shrine{background:#f2d58a}
+.legend-dot.warrior{background:#8fe18a}
+.legend-dot.pulse{animation:legendPulse 1.6s ease-in-out infinite}
+#demoLegendTip{margin:8px 0 0 0}
+#survivalCanvasWrap{display:flex;justify-content:center;background:rgba(7,18,30,.45);border:1px solid rgba(128,177,219,.25);border-radius:12px;padding:8px}
+#survivalCanvas{max-width:100%;height:auto;border-radius:8px;background:radial-gradient(circle at 30% 20%, #17324d 0%, #12263a 40%, #0d1b2a 100%)}
+@media (max-width:680px){.hero{grid-template-columns:1fr}.hud{grid-template-columns:1fr}}
+@media (max-width:680px){.survival-hud{grid-template-columns:1fr}}
+@media (max-width:680px){.legend-grid{grid-template-columns:1fr}}

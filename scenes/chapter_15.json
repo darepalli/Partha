@@ -1,0 +1,42 @@
+{
+  "chapter": 15,
+  "title": "The Two Trees",
+  "text": "Two symbolic trees appear: one material, one spiritual.",
+  "choices": [
+    {
+      "label": "Choose the material",
+      "effects": {
+        "rajas": 6,
+        "tamas": 3
+      }
+    },
+    {
+      "label": "Seek comfort",
+      "effects": {
+        "tamas": 5
+      }
+    },
+    {
+      "label": "Follow righteousness",
+      "effects": {
+        "sattva": 6,
+        "purity": 4
+      }
+    },
+    {
+      "label": "Seek the root of truth",
+      "effects": {
+        "clarity": 7
+      }
+    },
+    {
+      "label": "Cling to the Divine root",
+      "effects": {
+        "devotion": 7
+      }
+    }
+  ],
+  "action": "Choose the spiritual over the material",
+  "meditation": "Contemplate 'Who am I?' without answering.",
+  "boss": false
+}

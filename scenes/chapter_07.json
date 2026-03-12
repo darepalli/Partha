@@ -1,0 +1,43 @@
+{
+  "chapter": 7,
+  "title": "The Search for Truth",
+  "text": "Many claim to know truth. Whom do you follow?",
+  "choices": [
+    {
+      "label": "Charismatic deceiver",
+      "effects": {
+        "tamas": 7,
+        "clarity": -4
+      }
+    },
+    {
+      "label": "Materialist guru",
+      "effects": {
+        "rajas": 6
+      }
+    },
+    {
+      "label": "Ethical sage",
+      "effects": {
+        "sattva": 6,
+        "purity": 4
+      }
+    },
+    {
+      "label": "Contemplative mystic",
+      "effects": {
+        "clarity": 6
+      }
+    },
+    {
+      "label": "The Divine as refuge",
+      "effects": {
+        "devotion": 7,
+        "sattva": 3
+      }
+    }
+  ],
+  "action": "Act kindly toward someone hostile",
+  "meditation": "Release tension with each exhale.",
+  "boss": false
+}

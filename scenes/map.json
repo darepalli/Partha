@@ -1,0 +1,21 @@
+{
+  "revelation_node": 11,
+  "krishna_events": [
+    2,
+    4,
+    9,
+    11,
+    18
+  ],
+  "boss_nodes": [
+    3,
+    6,
+    12,
+    16
+  ],
+  "endings": [
+    "Devotion",
+    "Clarity",
+    "Purity"
+  ]
+}

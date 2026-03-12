@@ -1,0 +1,46 @@
+{
+  "chapter": 1,
+  "title": "The Call to Stand",
+  "text": "A moment of life-changing importance arrives. You feel unprepared, yet destiny insists.",
+  "choices": [
+    {
+      "label": "Avoid",
+      "effects": {
+        "tamas": 6,
+        "rajas": 2,
+        "clarity": -3
+      }
+    },
+    {
+      "label": "Grasp for Gain",
+      "effects": {
+        "rajas": 7,
+        "clarity": -2
+      }
+    },
+    {
+      "label": "Answer Duty",
+      "effects": {
+        "purity": 6,
+        "sattva": 3
+      }
+    },
+    {
+      "label": "Reflect Deeply",
+      "effects": {
+        "sattva": 6,
+        "clarity": 5
+      }
+    },
+    {
+      "label": "Trust the Divine",
+      "effects": {
+        "devotion": 6,
+        "sattva": 3
+      }
+    }
+  ],
+  "action": "Offer help to someone struggling",
+  "meditation": "Focus on breath gently rising and falling.",
+  "boss": false
+}
